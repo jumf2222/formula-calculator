@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/formula-calculator/static/css/main.833ccfa1.css",
+    "main.js": "/formula-calculator/static/js/main.a98485af.js",
+    "static/js/377.cf665632.chunk.js": "/formula-calculator/static/js/377.cf665632.chunk.js",
+    "service-worker.js": "/formula-calculator/service-worker.js",
+    "index.html": "/formula-calculator/index.html",
+    "main.833ccfa1.css.map": "/formula-calculator/static/css/main.833ccfa1.css.map",
+    "main.a98485af.js.map": "/formula-calculator/static/js/main.a98485af.js.map",
+    "377.cf665632.chunk.js.map": "/formula-calculator/static/js/377.cf665632.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.833ccfa1.css",
+    "static/js/main.a98485af.js"
+  ]
+}
