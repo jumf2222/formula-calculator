@@ -21,17 +21,59 @@ export const FORMULAS: Formula[] = [
         }
     },
     {
-        name: "Z Score",
-        variables: ["M", "μ", "n", "σ"],
+        name: "Z Score / T Score (Hypothesis)",
+        variables: ["M", "μ", "n", "σ / s"],
         calculate: (m, mu, n, sigma) => {
             return (m - mu) * Math.sqrt(n) / sigma;
         }
     },
     {
-        name: "T Score",
-        variables: ["M", "μ", "n", "s"],
-        calculate: (m, mu, n, s) => {
-            return (m - mu) * Math.sqrt(n) / s;
+        name: "Standard Deviation",
+        variables: ["SS", "n"],
+        calculate: (SS, n) => {
+            return Math.sqrt(SS / (n - 1));
         }
-    }
+    },
+    {
+        name: "Z Score",
+        variables: ["x", "M", "σ / s"],
+        calculate: (x, M, sigma) => {
+            return (x - M) / sigma;
+        }
+    },
+    {
+        name: "s",
+        variables: ["SS", "n"],
+        calculate: (SS, n) => {
+            return Math.sqrt(SS / (n - 1));
+        }
+    },
+    {
+        name: "Median",
+        variables: ["n"],
+        calculate: (n) => {
+            return Math.floor((n + 1) / 2);
+        }
+    },
+    {
+        name: "Percentile",
+        variables: ["n", "k"],
+        calculate: (n, k) => {
+            return Math.floor(k * (n + 1) / 100);
+        }
+    },
+    {
+        name: "Quartile",
+        variables: ["n", "k"],
+        calculate: (n, k) => {
+            return Math.floor(k * (n + 1) / 4);
+        }
+    },
+    {
+        name: "Range",
+        variables: ["min", "max"],
+        calculate: (min, max) => {
+            return max - min;
+        }
+    },
 ];
